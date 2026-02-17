@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+Establish a app that determines whether the user has an allergy or cold based on a questionaire format
  
 Known Issues:
-blah, blah, blah, blah
+fill here
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -36,8 +36,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var allergy_count = 0; //contains variable for number of answers indicating allergies
+        var cold_count = 0; //contains variable for number of answers indicating a cold
 
 
         function allergyAdd(){
@@ -45,10 +45,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		alert(allergy_count);
 
         }
+	    // updates variable allergy_count to increase by 1
 
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+		//updates variable cold_count to increase by 1
 
   </script>
 
@@ -111,10 +113,43 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
+		<p>Do you have a fever?</p>  <!-- /adding text for question 2-->
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+
 	</div>
 </div>	
 
+	<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>  <!-- /adding text for question 3-->
+		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+
+	</div>
+</div>	
+
+	<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are your synptoms seasonal or chronic?</p>  <!-- /adding text for question 3-->
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+
+	</div>
+</div>	
+
+
+
+
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
