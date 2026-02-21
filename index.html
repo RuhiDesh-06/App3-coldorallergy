@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Ruhi Deshpande
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,11 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-Establish a app that determines whether the user has an allergy or cold based on a questionaire format
+Establish an app that determines whether the user has an allergy or cold based on a questionnaire format
  
 Known Issues:
-fill here
+Limited to 4 questions
+
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -43,7 +44,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
-
+ 
         }
 	    // updates variable allergy_count to increase by 1
 
@@ -58,15 +59,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	    var resultText = document.getElementById("results"); //variable to store the result text
 	    resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 
-}
-
+		}
+        // function to produce the percent chances of allergies or a cold on the results page
 	   
 
   </script>
 
 
 
-<style>	
+<style>	<!-- sets the visuals for the webpage -->
 .body {
      margin: 0em;
 }
@@ -101,7 +102,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-</div> <!-- adding this because it seems to be missing????? -->
+</div> <!--introductory screen -->
 	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -113,9 +114,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
 		<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 
-	</div> <!-- /content -->
-
-</div>
+	</div> 
+</div>  <!-- page for first question -->	
 
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
@@ -127,8 +127,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 
-	</div>
-</div>	
+	</div> 
+</div>	 <!-- page for second question -->
 
 	<div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
@@ -141,7 +141,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 
 	</div>
-</div>	
+</div>	 <!-- page for third question -->
 
 	<div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
@@ -154,7 +154,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <a href="#final" onclick="coldAdd(); getResults();" class="w3-btn w3-black">No</a>
 
 	</div>
-</div>	
+</div>	 <!-- page for fourth question -->
 
 <div class="page" id="final">
 	<div class="w3-container w3-flat-carrot">
@@ -165,13 +165,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p id="results"> </p> <!-- /adding text  to display results-->
 		
 	</div>
-</div>
+</div>  <!-- page for results of questionaire -->
 
 
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
-</footer>
+</footer>   <!-- footer at bottom of the page -->
 
 </body>
 </html>
